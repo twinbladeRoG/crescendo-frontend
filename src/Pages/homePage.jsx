@@ -85,7 +85,7 @@ export default function HomePage() {
             navigate("/login");
           }}
         />
-        <h1 style={{color: "green", fontWeight: "600"}}>Crescendro</h1>
+        <h1 style={{color: "green", fontWeight: "600"}}>Crescendo</h1>
         <h2>Home</h2>
         <Card
           style={{

@@ -168,7 +168,7 @@ export default function EditDocPage(props) {
           color={"green"}
           onClick={() => navigate("/")}
         />
-        <h1 style={{color: "green", fontWeight: "600"}}>Crescendro</h1>
+        <h1 style={{color: "green", fontWeight: "600"}}>Crescendo</h1>
         <h1>Onboard Doctor</h1>
       </Container>
       <Container>
