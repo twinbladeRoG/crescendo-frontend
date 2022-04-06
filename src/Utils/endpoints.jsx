@@ -7,5 +7,4 @@ const HOST = import.meta.env.VITE_API_URL,
     docLogin: HOST + "/api/auth/doctor/login/email",
   };
 
-  
 export default endpoints;
