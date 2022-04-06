@@ -77,11 +77,7 @@ export default function SetPasswordPage() {
   return (
     <>
       <Container>
-        <Card>
-          <Card.Body style={{ backgroundColor: "#4be640" }}>
-            Crescendo
-          </Card.Body>
-        </Card>
+      <h1 style={{color: "green", fontWeight: "600"}}>Crescendro</h1>
       </Container>
 
       <Container style={{ marginTop: "5%" }}>

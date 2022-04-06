@@ -161,12 +161,14 @@ export default function EditDocPage(props) {
   return (
     <>
       <Container>
+      
         <AiFillHome
           className="float-end"
           size={30}
           color={"green"}
           onClick={() => navigate("/")}
         />
+        <h1 style={{color: "green", fontWeight: "600"}}>Crescendro</h1>
         <h1>Onboard Doctor</h1>
       </Container>
       <Container>

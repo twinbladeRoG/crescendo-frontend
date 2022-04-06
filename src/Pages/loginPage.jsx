@@ -44,6 +44,7 @@ export default function LoginPage() {
   return (
     <>
       <Container>
+      <h1 style={{color: "green", fontWeight: "600"}}>Crescendro</h1>
         <Card>
           <Card.Body style={{ backgroundColor: "#4be640" }}>
             <Card.Text>Login as</Card.Text>
