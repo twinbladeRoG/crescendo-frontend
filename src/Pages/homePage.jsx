@@ -65,7 +65,6 @@ export default function HomePage() {
   useEffect(() => {
     const authStatus = isAuthenticated(true);
     if (authStatus) {
-      console.log(authStatus);
       const userInfo = getUserInfo(authStatus, authStatus.user.type);
       setUserInfo(userInfo);
     } else {

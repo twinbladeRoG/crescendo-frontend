@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import { isAuthenticated } from "../Utils/Utils";
 import { Form, Button, Container, Card } from "react-bootstrap";
 import { GiStethoscope } from "react-icons/gi";
@@ -12,7 +12,6 @@ function handleLogin(email, passw, isDoctor, navigate) {
   axios
     .post(url, { email: email, password: passw })
     .then((res) => {
-      console.log(res.status);
       localStorage.setItem("ZDSCRSCREDS", JSON.stringify(res.data));
       const authStatus = isAuthenticated();
       if (authStatus) {
@@ -20,7 +19,6 @@ function handleLogin(email, passw, isDoctor, navigate) {
       }
     })
     .catch((err) => {
-      console.log(err);
       alert("Username / Password not valid!");
     });
 }
@@ -56,7 +54,6 @@ export default function LoginPage() {
               }}
               type="switch"
               id="custom-switch"
-              label="Check this switch"
             />
             <Card.Title as="h2">
               {loginAsDoc ? "Doctor" : "Medical Representative"}
@@ -103,6 +100,15 @@ export default function LoginPage() {
             Submit
           </Button>
         </Form>
+        
+        {loginAsDoc ? (
+          ""
+        ) : (
+          <p style={{ marginTop: "20px" }}>
+            Not Registered?
+            <Link to="/signup">Signup Here</Link>
+          </p>
+        )}
       </Container>
     </>
   );

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { isAuthenticated } from "../Utils/Utils";
-import { Card, Container } from "react-bootstrap";
+import { Card, Container, Button } from "react-bootstrap";
 import { BsFillTelephoneOutboundFill } from "react-icons/bs";
 import { AiOutlineMail, AiFillHome } from "react-icons/ai";
 import { BiRegistered } from "react-icons/bi";
@@ -22,7 +22,7 @@ export default function AllDocPage() {
         .then((res) => {
           setAllDocs(res.data.data.doctors);
         })
-        .catch((error) => console.log(error));
+        .catch((error) => alert("Unexpected Error Occured!"));
     } else {
       navigate("/login");
     }
@@ -75,6 +75,14 @@ export default function AllDocPage() {
                   &nbsp; {doc.email}
                 </Card.Text>
               </Card.Body>
+              <Button
+                onClick={() => {
+                  localStorage.setItem("ZDSMYDOC", JSON.stringify(doc));
+                  navigate("/edit");
+                }}
+              >
+                Edit
+              </Button>
             </Card>
           );
         })}
